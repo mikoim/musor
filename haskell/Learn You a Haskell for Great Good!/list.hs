@@ -49,3 +49,9 @@ product [1,2,3] -- 6
 
 elem 'O' "LOL" -- True
 'O' `elem` "LOL" -- True
+
+cycle "LO" -- generate infinite list from a list
+take 11 $ cycle "LO" -- "LOLOLOLOLOL"
+
+repeat 'ω' -- generate infinite list from an element
+take 3 $ repeat 'ω' -- "ωωω"
