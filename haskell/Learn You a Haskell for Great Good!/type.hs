@@ -1,4 +1,4 @@
-import Data.Int
+import           Data.Int
 
 removeNonHiragana :: [Char] -> [Char]
 removeNonHiragana s = [ c | c <- s, c `elem` ['あ'..'ん']]

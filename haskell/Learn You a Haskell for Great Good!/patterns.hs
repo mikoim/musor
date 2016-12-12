@@ -1,6 +1,6 @@
 su :: String -> Bool
 su "（´・ω・） ｽ" = True
-su x = False
+su x          = False
 
 -- su "（´・ω・） ｽ" -- True
 -- su "foobar" -- False
@@ -26,7 +26,7 @@ addVectors (x1, y1) (x2, y2) = (x1 + x2, y1 + y2)
 
 -- as-pattern
 suffix :: String -> String
-suffix "" = "Empty string"
+suffix ""         = "Empty string"
 suffix all@(x:xs) = all ++ " = " ++ [x] ++ " ++ " ++ xs
 
 -- suffix "abc" -- "abc = a ++ bc"
