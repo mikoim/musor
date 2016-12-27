@@ -24,7 +24,7 @@ take' n (x:xs) = x : take' (n-1) xs
 
 
 reverse' :: [a] -> [a]
-reverse' [] = []
+reverse' []     = []
 reverse' (x:xs) = reverse' xs ++ [x]
 
 -- reverse' [3,2,1]
@@ -37,8 +37,8 @@ repeat' x = x : repeat' x
 
 
 zip' :: [a] -> [b] -> [(a,b)]
-zip' _ [] = []
-zip' [] _ = []
+zip' _ []          = []
+zip' [] _          = []
 zip' (x:xs) (y:ys) = (x, y) : zip' xs ys
 
 -- zip' [1,2,3] [4,5,6] -- [(1,4),(2,5),(3,6)]
