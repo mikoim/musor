@@ -16,3 +16,8 @@ Map.has_key? map2, :apple
 { _value, updated_map } = Map.pop map2, :apple
 
 Map.equal? map, updated_map
+
+%{ foo: bar } = map
+bar
+
+%{ foo: _, hoge: _ } = map
