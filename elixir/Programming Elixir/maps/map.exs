@@ -21,3 +21,9 @@ Map.equal? map, updated_map
 bar
 
 %{ foo: _, hoge: _ } = map
+
+%{ 2 => state } = %{ 1 => :ok, 2 => :error }
+state
+
+# can't bind key in pattern matching
+# %{ item => :ok } = %{ 1 => :ok, 2 => :error }
