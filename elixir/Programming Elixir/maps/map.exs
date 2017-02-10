@@ -27,3 +27,9 @@ state
 
 # can't bind key in pattern matching
 # %{ item => :ok } = %{ 1 => :ok, 2 => :error }
+
+data = %{ name: "Dave", state: "TX", likes: "Elixir" }
+for key <- [ :name, :likes ] do
+  %{ ^key => value } = data
+  value
+end
