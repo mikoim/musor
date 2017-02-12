@@ -33,3 +33,10 @@ for key <- [ :name, :likes ] do
   %{ ^key => value } = data
   value
 end
+
+mikoim = %{ name: "mikoim", email: "ek@esh.ink" }
+person = %{ mikoim | name: "Eshin Kunishima" }
+# You can't add a new key like the following code.
+# %{ mikoim | icon: "gravatar" }
+# use Map.put_new/3
+person = Map.put_new mikoim, :icon, "gravatar"
