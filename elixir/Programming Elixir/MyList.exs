@@ -5,10 +5,11 @@ defmodule MyList do
   def map([], _func), do: []
   def map([head | tail], func), do: [func.(head) | map(tail, func)]
 
-  def sum([], total), do: total
-  def sum([head | tail], total), do: sum(tail, head + total)
+  def sum(list), do: _sum(list, 0)
+  defp _sum([], total), do: total
+  defp _sum([head | tail], total), do: _sum(tail, head + total)
 end
 
 IO.puts MyList.len([1,2,3,4,5])
 IO.puts MyList.map([1,2,3,4,5], &(&1 + &1))
-IO.puts MyList.sum([1,2,3,4,5], 0)
+IO.puts MyList.sum([1,2,3,4,5])
