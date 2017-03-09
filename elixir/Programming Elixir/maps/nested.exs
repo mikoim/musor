@@ -16,3 +16,11 @@ get_in(nyan, [:nuko, :su])
 # "（*´・ω・）"
 get_and_update_in(nyan, [:nuko, :su], &{&1, &1 <> " ｽ"})
 # {"（*´・ω・）", %{nuko: %{su: "（*´・ω・） ｽ"}}}
+
+nyan = %{nuko: %{su: "（*´・ω・）"}}
+nyan.nuko.su
+# "（*´・ω・）"
+nyan[:nuko][:su]
+# "（*´・ω・）"
+get_and_update_in(nyan[:nuko][:su], &{&1, &1 <> " ｽ"})
+# {"（*´・ω・）", %{nuko: %{su: "（*´・ω・） ｽ"}}}
