@@ -1,7 +1,7 @@
 defmodule Chop do
   def guess(actual, a..b), do: guess!(actual, a..b, div(a + b, 2))
 
-  defp guess!(actual, a..b, n) when actual == n do
+  defp guess!(actual, _a.._b, n) when actual == n do
     IO.puts "Is it #{n}"
     n
   end
